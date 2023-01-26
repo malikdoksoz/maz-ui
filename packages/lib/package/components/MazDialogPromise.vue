@@ -6,10 +6,10 @@
     @update:model-value="rejectDialog(currentModal)"
   >
     <template #title>
-      <slot name="title">{{ data?.title }}</slot>
+      <slot name="title" v-html="data?.title"></slot>
     </template>
     <template #default>
-      <slot>{{ data?.message }}</slot>
+      <slot v-html="data?.message"></slot>
     </template>
     <template #footer>
       <div class="maz-space-x-2">
